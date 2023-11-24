@@ -1,0 +1,27 @@
+composer create-project laravel/laravel:^8.0 laravel-ormawa
+ 
+cd  laravel-ormawa 
+php artisan serve
+
+push ke git
+
+BUAT TABEL
+php artisan make:migration create_students_table
+
+BUAT MODEL
+php artisan make:model Organization
+
+BUAT MENJALANKAN MIGRATE
+php artisan migrate
+
+
+php artisan make:Seeder OrganizationSeeder
+php artisan migrate
+
+php artisan db:seed --class=Organization
+
+BUAT PUSH GIT
+git init .
+git add .
+git commit -m "Comment"
+git push
